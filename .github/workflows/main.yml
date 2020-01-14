@@ -1,11 +1,6 @@
-workflow "Deploy to Heroku" {
-  on = "push"
-  
-}
-
-action "push" {
-  uses = "actions/heroku@master"
-  needs = "login"
-  args = "container:push -a calm-fortress-1234 web"
-  secrets = e8de3f15-a2a5-4cdf-93ea-3e54a1b3c4f3
-}
+- name: Deploy to Heroku
+  env:
+    HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
+    HEROKU_APP_NAME: "mycooolapp"
+  if: github.ref == 'refs/heads/master' && job.status == 'success'
+  run: git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$mycooolapp.git origin/master:master
