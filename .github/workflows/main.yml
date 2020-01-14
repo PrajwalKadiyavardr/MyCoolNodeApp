@@ -21,4 +21,4 @@ jobs:
         HEROKU_APP_NAME: "mycooolapp"
       if: github.ref == 'refs/heads/master' && job.status == 'success'
       run: |
-       git push https://git.heroku.com/mycooolapp.git
+       echo ran
