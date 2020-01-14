@@ -17,7 +17,7 @@ jobs:
         echo test, and deploy your project.
     - name: Deploy to Heroku
       env:
-        HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
+        HEROKU_API_TOKEN: 7aa118aa-d09f-453d-8714-8c42d17c686f
         HEROKU_APP_NAME: "mycooolapp"
       if: github.ref == 'refs/heads/master' && job.status == 'success'
       run: |
