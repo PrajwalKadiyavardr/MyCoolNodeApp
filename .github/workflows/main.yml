@@ -27,6 +27,6 @@ jobs:
               login mynewnokiap8@gmail.com
               password 7aa118aa-d09f-453d-8714-8c42d17c686f
           EOF
-      - run: heroku git:remote -a $(basename ${{ github.repository}})
+      - run: heroku git:remote -a mycooolapp
       - run: git push heroku HEAD:refs/heads/master
       - run: heroku run "POOL_SIZE=2 mix ecto.migrate"
