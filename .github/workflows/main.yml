@@ -29,8 +29,8 @@ jobs:
 
   release:
     env:
-      HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
+      HEROKU_API_KEY: 7aa118aa-d09f-453d-8714-8c42d17c686f
+      HEROKU_EMAIL: mynewnokiap8@gmail.com
     runs-on: ubuntu-latest
 
     needs: test
