@@ -1,2 +1,11 @@
-name: GitHub Action for Heroku
-uses: actions/heroku@1.0.0
+workflow "Deploy to Heroku" {
+  on = "push"
+  
+}
+
+action "push" {
+  uses = "actions/heroku@master"
+  needs = "login"
+  args = "container:push -a calm-fortress-1234 web"
+  secrets = e8de3f15-a2a5-4cdf-93ea-3e54a1b3c4f3
+}
