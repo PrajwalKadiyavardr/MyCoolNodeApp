@@ -25,8 +25,7 @@ jobs:
         with:
           otp-version: 22.x
           elixir-version: 1.9.x
-      - run: mix deps.get
-      - run: mix test
+    
 
   release:
     env:
