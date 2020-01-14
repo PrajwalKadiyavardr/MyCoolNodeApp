@@ -20,5 +20,5 @@ jobs:
         HEROKU_API_TOKEN: 7aa118aa-d09f-453d-8714-8c42d17c686f
         HEROKU_APP_NAME: "mycooolapp"
       if: github.ref == 'refs/heads/master' && job.status == 'success'
-      run: |
-       git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/master:master
+      run: | 
+       git push https://git.heroku.com/mycooolapp.git
