@@ -21,11 +21,11 @@ jobs:
       - run: |+
           cat >~/.netrc <<EOF
           machine api.heroku.com
-              login $HEROKU_EMAIL
-              password $HEROKU_API_KEY
+              login mynewnokiap8@gmail.com
+              password 7aa118aa-d09f-453d-8714-8c42d17c686f
           machine git.heroku.com
-              login $HEROKU_EMAIL
-              password $HEROKU_API_KEY
+              login mynewnokiap8@gmail.com
+              password 7aa118aa-d09f-453d-8714-8c42d17c686f
           EOF
       - run: heroku git:remote -a $(basename ${{ github.repository}})
       - run: git push heroku HEAD:refs/heads/master
